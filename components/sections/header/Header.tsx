@@ -8,7 +8,7 @@ export default function Header() {
         Portfolio
       </Button>
       <Button className="">
-        Get in Touch
+        Contact
       </Button>
     </div>
   )

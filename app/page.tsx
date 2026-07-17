@@ -6,12 +6,13 @@ export default function Home() {
   return (
     <div className="relative h-screen">
       <Header />
-      <div className="flex h-full justify-center items-center">
-        <div className="text-6xl text-center">
-          <p>Where logic</p>
-          <p>becomes pixels</p>
-        </div>
-      </div>
+      <section className="flex h-full justify-center items-center">
+        <Hero />
+      </section>
+
+      <section className="min-h-screen">
+        <p>Hello</p>
+      </section>
     </div>
   );
 }
