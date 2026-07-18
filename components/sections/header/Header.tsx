@@ -3,11 +3,15 @@ import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
-    <div className="absolute top-5 right-5">
-      <Button className="">
+    <div className="absolute top-2 right-2">
+      <Button
+        className="font-bold text-base text-primary"
+        variant="link">
         Portfolio
       </Button>
-      <Button className="">
+      <Button
+        className="font-bold text-base text-primary"
+        variant="link">
         Contact
       </Button>
     </div>
