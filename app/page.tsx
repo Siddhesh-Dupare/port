@@ -7,8 +7,8 @@ import Skills from "@/components/sections/skills/Skills";
 export default function Home() {
   return (
     <div className="relative h-screen">
-      <Header />
-      <section className="min-h-screen flex justify-center items-center">
+      <section className="h-screen pt-20 font-semibold">
+        <Header />
         <Hero />
       </section>
 
