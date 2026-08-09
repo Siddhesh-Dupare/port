@@ -41,6 +41,8 @@ function BoldText({ timeline }: { timeline: gsap.core.Timeline }) {
   const textRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+    if (!textRef.current) return;
+
     SplitText.create("p", {
       type: "lines",
       mask: "lines",
