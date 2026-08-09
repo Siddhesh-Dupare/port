@@ -1,9 +1,8 @@
 
-import { Card } from "@/components/ui/card";
 
 export default function Projects() {
   return (
-    <div className="mx-2 flex flex-col flex-1 my-24">
+    <div className="relative mx-2 flex flex-col flex-1 my-24">
       <div className="absolute top-0 left-2">
         <h1 className="uppercase font-semibold text-4xl sm:text-8xl">projects</h1>
       </div>
