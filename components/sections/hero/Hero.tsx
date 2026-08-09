@@ -57,7 +57,7 @@ function BoldText({ timeline }: { timeline: gsap.core.Timeline }) {
   }, { scope: textRef });
 
   return (
-    <div ref={textRef} className="text-5xl sm:text-[11rem] sm:text-center uppercase">
+    <div ref={textRef} className="text-5xl md:text-[8rem] sm:text-[11rem] sm:text-center uppercase">
       <p>Where logic</p>
       <p className="md:mx-50 text-left">becomes</p>
       <p>pixels</p>
@@ -87,7 +87,7 @@ function IntroText({ timeline }: { timeline: gsap.core.Timeline }) {
   return (
     <div ref={textRef} className="mb-10 uppercase text-2xl md:text-4xl">
       <p>I&apos;m Siddhesh Dupare.</p>
-      <p>I belive every idea deserves to become real.</p>
+      <p>I believe every idea deserves to become real.</p>
     </div>
   );
 }
