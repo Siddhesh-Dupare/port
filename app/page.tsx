@@ -1,6 +1,7 @@
 
 import Hero from "@/components/sections/hero/Hero";
 import Projects from "@/components/sections/projects/Projects";
+import Footer from "@/components/sections/footer/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,10 @@ export default function Home() {
 
       <section>
         <Projects />
+      </section>
+
+      <section>
+        <Footer />
       </section>
 
     </div>
