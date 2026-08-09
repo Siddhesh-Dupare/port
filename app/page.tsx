@@ -11,7 +11,7 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section className="min-h-screen flex flex-col">
+      <section className="h-full">
         <Projects />
       </section>
 
