@@ -1,5 +1,7 @@
 "use client";
 
+import TextReveal from "@/components/ani-behaviour/TextReveal";
+
 import { MoveRight, ArrowDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -8,11 +10,13 @@ export default function Hero() {
   return (
     <div className="mx-2 flex min-h-svh text-primary flex-col py-6">
       {/* NOTE: Top text */}
-      <div className="text-5xl font-extrabold text-center">
-        <span className="block ml-10">Where logic</span>
-        <span className="block mr-30">becomes</span>
-        <span className="block">pixels</span>
-      </div>
+      <TextReveal>
+        <div className="text-5xl font-extrabold text-center">
+          <span className="block ml-10">Where logic</span>
+          <span className="block mr-30">becomes</span>
+          <span className="block">pixels</span>
+        </div>
+      </TextReveal>
 
       {/* NOTE: Bottom text */}
       <div className="mt-auto pb-4">
