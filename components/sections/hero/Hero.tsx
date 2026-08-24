@@ -14,33 +14,10 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 gsap.registerPlugin(SplitText, ScrollSmoother);
 
 export default function Hero() {
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    if (!textRef.current) return;
-
-    const text = new SplitText(textRef.current, { type: "lines", mask: "lines",  });
-    gsap.from(text.lines, {
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      stagger: 0.1,
-      ease: "power2.out",
-    });
-
-    return () => {
-      gsap.killTweensOf(text.lines);
-    }
-  });
-
   return (
     <div className="mx-2 flex min-h-svh text-primary flex-col py-6">
       {/* NOTE: Top text */}
-      <div ref={textRef} className="text-5xl font-extrabold text-center space-y-4">
-        <span className="block ml-10">Where logic</span>
-        <span className="block mr-30">becomes</span>
-        <span className="block">pixels</span>
-      </div>
+      <TopText />
 
       {/* NOTE: Bottom text */}
       <div className="mt-auto pb-4">
@@ -66,6 +43,35 @@ export default function Hero() {
             </div>
           </div>
       </div>
+    </div>
+  );
+}
+
+function TopText() {
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!textRef.current) return;
+
+    const text = new SplitText(textRef.current, { type: "lines", mask: "lines",  });
+    gsap.from(text.lines, {
+      duration: 1,
+      opacity: 0,
+      y: 50,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+
+    return () => {
+      gsap.killTweensOf(text.lines);
+    }
+  });
+
+  return (
+    <div ref={textRef} className="text-5xl font-extrabold text-center space-y-4 uppercase">
+      <span className="block ml-10">Where logic</span>
+      <span className="block mr-30">becomes</span>
+      <span className="block">pixels</span>
     </div>
   );
 }
