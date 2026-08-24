@@ -22,10 +22,7 @@ export default function Hero() {
       {/* NOTE: Bottom text */}
       <div className="mt-auto pb-4">
         {/* NOTE: Intro text */}
-        <div className="flex flex-col text-2xl uppercase">
-          <span className="">I&apos;m Siddhesh Dupare.</span>
-          <span> I believe every idea deserves to become real.</span>
-        </div>
+        <MyIntro />
 
         <div className="flex justify-between mt-20">
           <div className="flex items-center">
@@ -72,6 +69,35 @@ function TopText() {
       <span className="block ml-10">Where logic</span>
       <span className="block mr-30">becomes</span>
       <span className="block">pixels</span>
+    </div>
+  );
+}
+
+function MyIntro() {
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!textRef.current) return;
+
+    const text = new SplitText(textRef.current, { type: "lines", mask: "lines" });
+    gsap.from(text.lines, {
+      delay: 0.5,
+      duration: 1,
+      opacity: 0,
+      y: 50,
+      stagger: 0.5,
+      ease: "power1.out",
+    });
+
+    return () => {
+      gsap.killTweensOf(text.lines);
+    }
+  })
+
+  return (
+    <div ref={textRef} className="flex flex-col text-2xl uppercase">
+      <span className="">I&apos;m Siddhesh Dupare.</span>
+      <span> I believe every idea deserves to become real.</span>
     </div>
   );
 }
