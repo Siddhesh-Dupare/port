@@ -17,7 +17,9 @@ export default function Hero() {
   return (
     <div className="mx-2 flex min-h-svh text-primary flex-col py-6">
       {/* NOTE: Top text */}
-      <TopText />
+      <div className="flex-1 flex justify-center items-center">
+        <TopText />
+      </div>
 
       {/* NOTE: Bottom text */}
       <div className="mt-auto pb-4">
@@ -65,9 +67,9 @@ function TopText() {
   });
 
   return (
-    <div ref={textRef} className="text-5xl font-extrabold text-center space-y-4 uppercase">
-      <span className="block ml-10">Where logic</span>
-      <span className="block mr-30">becomes</span>
+    <div ref={textRef} className="text-5xl sm:text-[100px] font-extrabold text-center space-y-4 sm:-space-y-4 uppercase">
+      <span className="block ml-10 sm:ml-50">Where logic</span>
+      <span className="block mr-30 sm:mr-100">becomes</span>
       <span className="block">pixels</span>
     </div>
   );
@@ -95,7 +97,7 @@ function MyIntro() {
   })
 
   return (
-    <div ref={textRef} className="flex flex-col text-2xl uppercase">
+    <div ref={textRef} className="flex flex-col text-2xl sm:text-4xl uppercase">
       <span className="">I&apos;m Siddhesh Dupare.</span>
       <span> I believe every idea deserves to become real.</span>
     </div>
