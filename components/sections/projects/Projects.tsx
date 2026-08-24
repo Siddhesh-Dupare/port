@@ -1,3 +1,4 @@
+"use client";
 
 export default function Projects() {
   return (
@@ -8,6 +9,7 @@ export default function Projects() {
           <span className="">AlgoLens</span>
           <span className="">2026</span>
         </div>
+
         <div style={{
           marginTop: '8px',
           width: 'full',
@@ -18,7 +20,7 @@ export default function Projects() {
 
         <span className="text-2xl text-center font-medium">A visualizer</span>
 
-      </div>
+        </div>
     </div>
   );
 }

@@ -1,22 +1,46 @@
 "use client";
 
-import TextReveal from "@/components/ani-behaviour/TextReveal";
+import { useRef } from "react";
 
 import { MoveRight, ArrowDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+gsap.registerPlugin(SplitText, ScrollSmoother);
+
 export default function Hero() {
+  const textRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!textRef.current) return;
+
+    const text = new SplitText(textRef.current, { type: "lines", mask: "lines",  });
+    gsap.from(text.lines, {
+      duration: 1,
+      opacity: 0,
+      y: 50,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+
+    return () => {
+      gsap.killTweensOf(text.lines);
+    }
+  });
+
   return (
     <div className="mx-2 flex min-h-svh text-primary flex-col py-6">
       {/* NOTE: Top text */}
-      <TextReveal>
-        <div className="text-5xl font-extrabold text-center">
-          <span className="block ml-10">Where logic</span>
-          <span className="block mr-30">becomes</span>
-          <span className="block">pixels</span>
-        </div>
-      </TextReveal>
+      <div ref={textRef} className="text-5xl font-extrabold text-center space-y-4">
+        <span className="block ml-10">Where logic</span>
+        <span className="block mr-30">becomes</span>
+        <span className="block">pixels</span>
+      </div>
 
       {/* NOTE: Bottom text */}
       <div className="mt-auto pb-4">
@@ -36,11 +60,11 @@ export default function Hero() {
             <MoveRight className="size-6" />
           </div>
 
-          <div className="flex items-center text-muted-foreground">
-            <span className="uppercase">scroll</span>
-            <ArrowDown className="size-6" />
+            <div className="flex items-center text-muted-foreground">
+              <span className="uppercase">scroll</span>
+              <ArrowDown className="size-6" />
+            </div>
           </div>
-        </div>
       </div>
     </div>
   );
