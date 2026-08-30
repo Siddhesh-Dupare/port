@@ -1,105 +1,14 @@
 "use client";
 
-import { useRef } from "react";
-
-import { MoveRight, ArrowDown } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { SplitText } from "gsap/SplitText";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-gsap.registerPlugin(SplitText, ScrollSmoother);
-
 export default function Hero() {
   return (
-    <div className="mx-2 flex min-h-svh text-primary flex-col py-6">
-      {/* NOTE: Top text */}
-      <div className="flex-1 flex justify-center items-center">
-        <TopText />
-      </div>
-
-      {/* NOTE: Bottom text */}
-      <div className="mt-auto pb-4">
-        {/* NOTE: Intro text */}
-        <MyIntro />
-
-        <div className="flex justify-between mt-20">
-          <div className="flex items-center">
-            <Button
-              className="text-xl pl-0 underline underline-offset-6"
-              variant="ghost">
-              Get in touch
-            </Button>
-            <MoveRight className="size-6" />
-          </div>
-
-            <div className="flex items-center text-muted-foreground">
-              <span className="uppercase">scroll</span>
-              <ArrowDown className="size-6" />
-            </div>
-          </div>
-      </div>
-    </div>
-  );
-}
-
-function TopText() {
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    if (!textRef.current) return;
-
-    const text = new SplitText(textRef.current, { type: "lines", mask: "lines",  });
-    gsap.from(text.lines, {
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      stagger: 0.1,
-      ease: "power2.out",
-    });
-
-    return () => {
-      gsap.killTweensOf(text.lines);
-    }
-  });
-
-  return (
-    <div ref={textRef} className="text-5xl sm:text-[100px] font-extrabold text-center space-y-4 sm:-space-y-4 uppercase">
-      <span className="block ml-10 sm:ml-50">Where logic</span>
-      <span className="block mr-30 sm:mr-100">becomes</span>
-      <span className="block">pixels</span>
-    </div>
-  );
-}
-
-function MyIntro() {
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    if (!textRef.current) return;
-
-    const text = new SplitText(textRef.current, { type: "lines", mask: "lines" });
-    gsap.from(text.lines, {
-      delay: 0.5,
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      stagger: 0.5,
-      ease: "power1.out",
-    });
-
-    return () => {
-      gsap.killTweensOf(text.lines);
-    }
-  })
-
-  return (
-    <div ref={textRef} className="flex flex-col text-2xl sm:text-4xl uppercase">
-      <span className="">I&apos;m Siddhesh Dupare.</span>
-      <span> I believe every idea deserves to become real.</span>
+    <div className="flex justify-center items-center h-screen p-6">
+      <svg viewBox="0 0 760 220" className="h-auto w-full select-none font-bold uppercase">
+        <text x="0" y="0" dominantBaseline="hanging" fontSize="122" fill="currentColor">SID</text>
+        <text x="190" y="8" fontSize="250" dominantBaseline="hanging" className="font-share-tech">D</text>
+        <text x="310" y="0" fontSize="120" dominantBaseline="hanging" fill="currentColor">HESH</text>
+        <text x="310" y="90" fontSize="120" dominantBaseline="hanging" fill="currentColor">UPARE</text>
+      </svg>
     </div>
   );
 }

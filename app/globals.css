@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+
+@layer utilities {
+    .font-share-tech {
+        font-family: 'Share Tech', sans-serif;
+    }
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -10,6 +17,7 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
+  --font-caacupe: var(--font-share-tech);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
