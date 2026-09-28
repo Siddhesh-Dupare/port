@@ -114,13 +114,10 @@ export default function Projects() {
   const nextIndex = (activeIndex + 1) % projects.length;
 
   return (
-    <section className="mx-3 overflow-hidden bg-background px-4 text-foreground sm:mx-6 sm:px-8 sm:py-20 lg:mx-12 lg:px-12 lg:py-24 xl:mx-20">
+    <section className="mx-3 overflow-hidden bg-background px-4 py-6 text-foreground sm:mx-6 sm:px-8 sm:py-20 lg:mx-12 lg:px-12 lg:py-24 xl:mx-20">
       <div>
         <div className="mb-8 flex items-end justify-between gap-4 sm:mb-10">
           <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
-              Selected work
-            </p>
             <h2 className="mt-2 font-cascadia text-4xl tracking-[-0.06em] sm:text-6xl">
               Research Project
             </h2>

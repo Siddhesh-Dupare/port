@@ -5,9 +5,9 @@ import Projects from "@/components/sections/projects/Projects";
 export default function Intro() {
   return (
     <>
-      <section className="mx-3 overflow-hidden bg-background px-4 text-foreground sm:mx-6 sm:px-8 lg:mx-12 lg:px-12 xl:mx-20">
+      <section className="mx-3 overflow-hidden bg-background px-4 text-foreground sm:mx-6 sm:px-8 lg:mx-12 xl:mx-20">
         <div className="flex items-start justify-between gap-4">
-          <h1 className="font-cascadia text-[clamp(3.25rem,11vw,9rem)] leading-[0.85] tracking-[-0.07em]">
+          <h1 className="font-cascadia text-[clamp(3rem,10vw,9rem)] leading-[0.85] tracking-[-0.07em]">
             Full-stack
           </h1>
           <div className="flex shrink-0 items-center gap-2 pt-1 sm:gap-3 sm:pt-2">
@@ -24,7 +24,7 @@ export default function Intro() {
         </div>
 
         <div className="mt-10 grid gap-8 sm:mt-12 lg:grid-cols-2 lg:gap-6">
-          <h1 className="order-1 text-right font-cascadia text-[clamp(3.25rem,11vw,9rem)] leading-[0.85] tracking-[-0.07em] lg:col-start-2 lg:row-start-1">
+          <h1 className="order-1 text-right font-cascadia text-[clamp(3rem,10vw,9rem)] leading-[0.85] tracking-[-0.07em] lg:col-start-2 lg:row-start-1">
             Developer
           </h1>
         </div>
