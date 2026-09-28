@@ -60,14 +60,8 @@ function NavigationButton({
     <button
       type="button"
       aria-label={`${direction === "left" ? "Previous" : "Next"} project`}
-      onPointerUp={onClick}
-      onKeyDown={(event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          onClick();
-        }
-      }}
       className="relative z-10 flex size-12 shrink-0 touch-manipulation items-center justify-center rounded-full border border-foreground/60 bg-background/80 text-foreground backdrop-blur-sm transition-colors hover:bg-foreground hover:text-background"
+      onClick={onClick}
     >
       <Icon className="size-5" />
     </button>
@@ -128,7 +122,7 @@ export default function Projects() {
               Selected work
             </p>
             <h2 className="mt-2 font-cascadia text-4xl tracking-[-0.06em] sm:text-6xl">
-              Projects
+              Research Project
             </h2>
           </div>
           <p className="hidden max-w-xs text-right text-sm text-muted-foreground sm:block">
@@ -138,8 +132,8 @@ export default function Projects() {
 
         <div className="relative lg:h-[22rem]">
           <div className="hidden lg:block">
-            <div className="absolute left-1/2 top-1/2 flex w-[min(58rem,calc(100vw-6rem))] -translate-x-1/2 -translate-y-1/2 items-center justify-between gap-6">
-              <div className="pointer-events-none flex h-64 w-64 shrink-0 scale-90 overflow-hidden rounded-[2rem] border border-foreground/20 opacity-30 blur-[1px]">
+            <div className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-6">
+              <div className="pointer-events-none flex h-64 w-80 shrink-0 scale-90 overflow-hidden rounded-[2rem] border border-foreground/20 opacity-30 blur-[1px]">
                 <ProjectImage project={projects[previousIndex]} />
                 <ProjectContent project={projects[previousIndex]} />
               </div>
@@ -149,13 +143,13 @@ export default function Projects() {
                 <ProjectContent project={activeProject} />
               </article>
 
-              <div className="pointer-events-none flex h-64 w-64 shrink-0 scale-90 overflow-hidden rounded-[2rem] border border-foreground/20 opacity-30 blur-[1px]">
+              <div className="pointer-events-none flex h-64 w-80 shrink-0 scale-90 overflow-hidden rounded-[2rem] border border-foreground/20 opacity-30 blur-[1px]">
                 <ProjectImage project={projects[nextIndex]} />
                 <ProjectContent project={projects[nextIndex]} />
               </div>
             </div>
 
-            <div className="absolute inset-y-0 left-1/2 z-20 flex w-[min(57rem,calc(100vw-6rem))] -translate-x-1/2 items-center justify-between px-4">
+            <div className="absolute inset-y-0 left-1/2 z-20 flex w-full -translate-x-1/2 items-center justify-between px-4">
               <NavigationButton direction="left" onClick={previousProject} />
               <NavigationButton direction="right" onClick={nextProject} />
             </div>
