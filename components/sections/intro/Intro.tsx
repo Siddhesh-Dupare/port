@@ -1,32 +1,35 @@
 
 import { MoveRight } from "lucide-react";
+import Projects from "@/components/sections/projects/Projects";
 
 export default function Intro() {
   return (
-    <div className="mx-3 sm:mx-6 lg:mx-40">
-      <div className="flex justify-between items-center">
-        <h1 className="text-4xl sm:text-7xl lg:text-[9rem] font-cascadia">Full-stack</h1>
-        <div className="flex items-center gap-4 sm:gap-6">
-          <button
-            className="border border-black rounded-full px-4 py-1 sm:px-6 sm:py-2 lg:px-20 lg:py-3"
-          >
-            Projects
-          </button>
-          <div className="border border-black rounded-full p-1 sm:p-2">
-            <MoveRight />
+    <>
+      <section className="mx-3 overflow-hidden bg-background px-4 text-foreground sm:mx-6 sm:px-8 lg:mx-12 lg:px-12 xl:mx-20">
+        <div className="flex items-start justify-between gap-4">
+          <h1 className="font-cascadia text-[clamp(3.25rem,11vw,9rem)] leading-[0.85] tracking-[-0.07em]">
+            Full-stack
+          </h1>
+          <div className="flex shrink-0 items-center gap-2 pt-1 sm:gap-3 sm:pt-2">
+            <button className="min-w-24 rounded-full border border-foreground px-4 py-2 text-sm italic sm:min-w-36 sm:px-8 sm:py-3 sm:text-base lg:min-w-72">
+              Projects
+            </button>
+            <button
+              aria-label="Projects"
+              className="rounded-full border border-foreground p-2 sm:p-3"
+            >
+              <MoveRight className="size-4 sm:size-5" />
+            </button>
           </div>
-
         </div>
-      </div>
 
-      <div className="relative min-h-28">
-        <p className="text-base absolute left-0 -bottom-5 sm:-bottom-12 sm:text-lg lg:text-4xl">
-          My goal is to write <b>write maintainable, clear</b><br />
-          and <b>understandable code</b> to process<br />
-          development was enjoyable
-        </p>
-        <h1 className="absolute top-0 right-0 text-4xl sm:text-7xl lg:text-[9rem] font-cascadia">Developer</h1>
-      </div>
-    </div>
+        <div className="mt-10 grid gap-8 sm:mt-12 lg:grid-cols-2 lg:gap-6">
+          <h1 className="order-1 text-right font-cascadia text-[clamp(3.25rem,11vw,9rem)] leading-[0.85] tracking-[-0.07em] lg:col-start-2 lg:row-start-1">
+            Developer
+          </h1>
+        </div>
+      </section>
+      <Projects />
+    </>
   );
 }
