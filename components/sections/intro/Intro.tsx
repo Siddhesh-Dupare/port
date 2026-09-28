@@ -1,6 +1,8 @@
 
 import { MoveRight } from "lucide-react";
 import Projects from "@/components/sections/projects/Projects";
+import TechStack from "@/components/sections/tech-stack/TechStack";
+import Experience from "@/components/sections/experience/Experience";
 
 export default function Intro() {
   return (
@@ -30,6 +32,8 @@ export default function Intro() {
         </div>
       </section>
       <Projects />
+      <TechStack />
+      <Experience />
     </>
   );
 }
