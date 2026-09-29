@@ -85,7 +85,7 @@ export default function TechStack() {
         </p>
 
         <a
-          href="https://github.com/your-username"
+          href="https://github.com/Siddhesh-Dupare"
           target="_blank"
           rel="noreferrer"
           className="group flex min-h-28 items-center justify-between rounded-[1.5rem] border border-foreground/30 p-5 transition-colors hover:bg-foreground hover:text-background sm:p-6 lg:col-span-3 lg:col-start-10 lg:row-start-5"
