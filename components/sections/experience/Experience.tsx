@@ -1,4 +1,5 @@
 type ExperienceEntry = {
+  key: string;
   period: string;
   duration: string;
   organization: string;
@@ -8,32 +9,36 @@ type ExperienceEntry = {
 
 const experienceEntries: ExperienceEntry[] = [
   {
-    period: "2024 - Present",
-    duration: "Placeholder",
-    organization: "Personal Projects",
-    role: "Full-stack developer",
-    focus: "JavaScript & Python",
+    key: "openeye",
+    period: "Oct 2026 - Present",
+    duration: "Ongoing",
+    organization: "OpenEye",
+    role: "Full-Stack Web Developer",
+    focus: "React, Next.js & TypeScript",
   },
   {
-    period: "2023 - 2024",
-    duration: "Placeholder",
-    organization: "Project / Organization",
-    role: "Software developer",
-    focus: "C++ & Systems",
+    key: "algolens",
+    period: "Apr 2026 - Aug 2026",
+    duration: "4 months",
+    organization: "AlgoLens",
+    role: "C++ Software Developer",
+    focus: "C++, Next.js, Spring Boot, Python",
   },
   {
-    period: "2022 - 2023",
-    duration: "Placeholder",
-    organization: "Open-source work",
-    role: "Developer",
-    focus: "Web & Backend",
+    key: "sliding-window-protocol",
+    period: "Jan 2025 - Feb 2025",
+    duration: "1 month",
+    organization: "Sliding Window Protocol",
+    role: "C++ Developer",
+    focus: "C++, React.js, WebAssembly, Computer Networking",
   },
   {
-    period: "2021 - 2022",
-    duration: "Placeholder",
-    organization: "Add organization",
-    role: "Add your role",
-    focus: "Add your technology focus",
+    key: "task-flow",
+    period: "Aug 2025 - Dec 2025",
+    duration: "4 months",
+    organization: "TaskFlow",
+    role: "Full-Stack Developer",
+    focus: "React.js, JavaScript, CI/CD",
   },
 ];
 
@@ -45,8 +50,7 @@ export default function Experience() {
           Work
         </h2>
         <p className="max-w-xs text-right text-sm leading-relaxed text-muted-foreground sm:text-base">
-          Placeholder experience entries. Replace these rows with your
-          internships, freelance work, open-source contributions, or projects.
+          Selected projects spanning full-stack development, systems programming, and AI-assisted software.
         </p>
       </div>
 
@@ -54,7 +58,7 @@ export default function Experience() {
         <div>
           {experienceEntries.map((entry) => (
             <article
-              key={`${entry.period}-${entry.organization}`}
+              key={entry.key}
               className="group grid gap-5 border-y border-foreground/20 px-3 py-6 transition-colors duration-300 hover:border-foreground hover:bg-foreground hover:text-background sm:px-5 lg:grid-cols-[1.15fr_2fr_3fr] lg:items-center lg:gap-8 lg:py-7"
             >
               <div>
@@ -84,9 +88,7 @@ export default function Experience() {
 
       <div className="mt-8 flex justify-end pt-6">
         <p className="text-right text-sm text-muted-foreground sm:text-base">
-          Work experience
-          <br />
-          <em className="text-foreground">To be added</em>
+          <em className="text-foreground">More projects coming soon.</em>
         </p>
       </div>
     </div>
