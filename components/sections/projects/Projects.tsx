@@ -114,7 +114,7 @@ export default function Projects() {
   const nextIndex = (activeIndex + 1) % projects.length;
 
   return (
-    <section className="mx-3 overflow-hidden bg-background px-4 py-6 text-foreground sm:mx-6 sm:px-8 sm:py-20 lg:mx-12 lg:px-12 lg:py-24 xl:mx-20">
+    <div className="mx-3 overflow-hidden bg-background px-4 py-6 text-foreground sm:mx-6 sm:px-8 sm:py-20 lg:mx-12 lg:px-12 lg:py-24 xl:mx-20">
       <div>
         <div className="mb-8 flex items-end justify-between gap-4 sm:mb-10">
           <div>
@@ -164,6 +164,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -50,7 +50,7 @@ const techGroups = [
 
 export default function TechStack() {
   return (
-    <section className="mx-3 overflow-hidden bg-background px-4 py-16 text-foreground sm:mx-6 sm:px-8 sm:py-20 lg:mx-12 lg:px-12 lg:py-24 xl:mx-20">
+    <div className="mx-3 overflow-hidden bg-background px-4 py-16 text-foreground sm:mx-6 sm:px-8 sm:py-20 lg:mx-12 lg:px-12 lg:py-24 xl:mx-20">
       <div className="flex flex-col gap-8 sm:gap-10 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
@@ -97,6 +97,6 @@ export default function TechStack() {
           <ArrowUpRight className="size-6 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
         </a>
       </div>
-    </section>
+    </div>
   );
 }

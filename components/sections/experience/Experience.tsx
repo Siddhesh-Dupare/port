@@ -39,7 +39,7 @@ const experienceEntries: ExperienceEntry[] = [
 
 export default function Experience() {
   return (
-    <section className="mx-3 overflow-hidden bg-background px-4 py-16 text-foreground sm:mx-6 sm:px-8 sm:py-20 lg:mx-12 lg:px-12 lg:py-24 xl:mx-20">
+    <div className="mx-3 overflow-hidden bg-background px-4 py-16 text-foreground sm:mx-6 sm:px-8 sm:py-20 lg:mx-12 lg:px-12 lg:py-24 xl:mx-20">
       <div className="flex items-end justify-between gap-6 pb-8">
         <h2 className="font-cascadia text-[clamp(4rem,14vw,9rem)] leading-[0.8] tracking-[-0.08em]">
           Work
@@ -89,6 +89,6 @@ export default function Experience() {
           <em className="text-foreground">To be added</em>
         </p>
       </div>
-    </section>
+    </div>
   );
 }

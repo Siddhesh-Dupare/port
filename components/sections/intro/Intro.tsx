@@ -1,13 +1,11 @@
 
 import { MoveRight } from "lucide-react";
 import Projects from "@/components/sections/projects/Projects";
-import TechStack from "@/components/sections/tech-stack/TechStack";
-import Experience from "@/components/sections/experience/Experience";
 
 export default function Intro() {
   return (
     <>
-      <section className="mx-3 overflow-hidden bg-background px-4 text-foreground sm:mx-6 sm:px-8 lg:mx-12 xl:mx-20">
+      <div className="mx-3 overflow-hidden bg-background px-4 text-foreground sm:mx-6 sm:px-8 lg:mx-12 xl:mx-20">
         <div className="flex items-start justify-between gap-4">
           <h1 className="font-cascadia text-[clamp(3rem,10vw,9rem)] leading-[0.85] tracking-[-0.07em]">
             Full-stack
@@ -30,10 +28,8 @@ export default function Intro() {
             Developer
           </h1>
         </div>
-      </section>
+      </div>
       <Projects />
-      <TechStack />
-      <Experience />
     </>
   );
 }
