@@ -2,6 +2,31 @@
 
 A modern, responsive personal portfolio website built with **Next.js 16**, **React 19**, and **Tailwind CSS v4**. Features smooth animations with GSAP and Lenis, a clean component architecture, and a focus on performance and accessibility.
 
+## 📑 Table of Contents
+
+- [🚀 Tech Stack](#-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [🎯 Features](#-features)
+- [🛠 Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Development](#development)
+  - [Production Build](#production-build)
+  - [Linting](#linting)
+- [📝 Customization](#-customization)
+  - [Updating Content](#updating-content)
+  - [Styling](#styling)
+  - [Adding Sections](#adding-sections)
+- [🌐 Deployment](#-deployment)
+  - [Vercel (Recommended)](#vercel-recommended)
+  - [Other Platforms](#other-platforms)
+- [📦 Key Dependencies](#-key-dependencies)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [🙏 Acknowledgments](#-acknowledgments)
+
+---
+
 ## 🚀 Tech Stack
 
 ### Frontend Framework
